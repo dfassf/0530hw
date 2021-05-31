@@ -3,9 +3,11 @@ function init(){
     const loginBtn = document.querySelector('#loginBtn');
     const layerPopup = document.querySelector('.layerPopup');
     const localLogin = document.querySelector('#localLogin');
+    const joinBtn = document.querySelector('.joinBtn');
     loginBtn.addEventListener('click',loginBtnFn)
     layerPopup.addEventListener('click',popupClose);
     localLogin.addEventListener('click',login);
+    joinBtn.addEventListener('click',joinBtnFn)
 }
 
 function loginBtnFn(){
@@ -74,4 +76,9 @@ async function login(){
         userpw.value = '';
         userid.focus();
     }
+}
+
+function joinBtnFn(){
+    location.href = '/join'
+    console.log('asd')
 }
